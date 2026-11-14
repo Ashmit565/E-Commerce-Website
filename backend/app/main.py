@@ -75,6 +75,15 @@ async def generic_exception_handler(request: Request, exc: Exception):
     )
 
 # Root & Health check
+@app.get("/api", tags=["Health"])
+def api_root():
+    return {
+        "status": "online",
+        "app": settings.PROJECT_NAME,
+        "docs": "/api/docs",
+        "environment": settings.ENV
+    }
+
 @app.get("/api/health", tags=["Health"])
 def health_check():
     return {
