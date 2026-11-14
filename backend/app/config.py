@@ -8,7 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DEFAULT_SQLITE_PATH = os.path.join(BASE_DIR, "shopsphere.db").replace("\\", "/")
+if os.getenv("VERCEL"):
+    DEFAULT_SQLITE_PATH = "/tmp/shopsphere.db"
+else:
+    DEFAULT_SQLITE_PATH = os.path.join(BASE_DIR, "shopsphere.db").replace("\\", "/")
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "E-Commerce Website"
