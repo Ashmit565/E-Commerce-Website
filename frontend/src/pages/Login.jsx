@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { ShoppingBag, Lock, Mail, Eye, EyeOff, ShieldCheck, UserCheck } from 'lucide-react';
+import { ShoppingBag, Lock, Mail, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 export default function Login() {
@@ -35,16 +35,6 @@ export default function Login() {
     }
   };
 
-  const handleDemoFill = (type) => {
-    if (type === 'admin') {
-      setEmail('admin@shopsphere.com');
-      setPassword('Admin@123456');
-    } else {
-      setEmail('john@example.com');
-      setPassword('Password@123');
-    }
-  };
-
   return (
     <div style={{
       minHeight: '80vh',
@@ -75,52 +65,6 @@ export default function Login() {
           <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '4px' }}>
             Sign in to access your orders, cart, and wishlist
           </p>
-        </div>
-
-        {/* Demo Accounts Quick-Fill Pill Buttons */}
-        <div style={{
-          backgroundColor: '#F3E8FF',
-          borderRadius: '12px',
-          padding: '12px',
-          marginBottom: '1.75rem',
-          border: '1px solid #E9D5FF'
-        }}>
-          <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.04em', display: 'block', marginBottom: '8px' }}>
-            Quick Demo Login:
-          </span>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              onClick={() => handleDemoFill('admin')}
-              className="btn btn-sm"
-              style={{
-                flex: 1,
-                backgroundColor: 'var(--primary)',
-                color: '#FFFFFF',
-                borderRadius: '8px',
-                fontSize: '0.78rem',
-                gap: '4px'
-              }}
-            >
-              <ShieldCheck size={14} />
-              <span>Admin Demo</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleDemoFill('customer')}
-              className="btn btn-secondary btn-sm"
-              style={{
-                flex: 1,
-                backgroundColor: '#FFFFFF',
-                borderRadius: '8px',
-                fontSize: '0.78rem',
-                gap: '4px'
-              }}
-            >
-              <UserCheck size={14} />
-              <span>Customer Demo</span>
-            </button>
-          </div>
         </div>
 
         <form onSubmit={handleSubmit}>
