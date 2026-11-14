@@ -1,0 +1,46 @@
+:root {
+  /* Brand Colors */
+  --primary: #6426C8;
+  --primary-hover: #521eb0;
+  --primary-light: #F3E8FF;
+  --primary-dark: #3B0764;
+  
+  --secondary: #0F172A; /* Dark Navy */
+  --secondary-light: #1E293B;
+  
+  --accent: #FF5964;
+  --accent-gold: #F59E0B;
+  --success: #10B981;
+  --danger: #EF4444;
+  --info: #3B82F6;
+  
+  /* Neutral Palette */
+  --bg-main: #FFFFFF;
+  --bg-surface: #F8FAFC;
+  --bg-subtle: #F1F5F9;
+  --border-light: #E2E8F0;
+  --border-focus: #CBD5E1;
+  
+  /* Text Colors */
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+  --text-white: #FFFFFF;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 14px 28px rgba(100, 38, 200, 0.12), 0 10px 10px rgba(0, 0, 0, 0.04);
+  
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
